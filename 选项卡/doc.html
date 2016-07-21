@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.0.0.js"></script>
+	<style type="text/css">
+		.activeBtn{background: red}
+		div{width: 200px;height: 200px;border:1px solid red;display: none;margin-top:10px;position: absolute;}
+	</style>
+	<script type="text/javascript">
+		// window.onload=function(){
+		// 	var oBtn=document.getElementsByTagName('input');
+		// 	var oDiv=document.getElementsByTagName('div');
+		// 	for(var i=0;i<oBtn.length;i++)
+		// 	{
+		// 		oBtn[i].index=i;
+		// 		oBtn[i].onclick=function(){
+		// 			for(var t=0;t<oBtn.length;t++)
+		// 			{
+		// 				oBtn[t].className="";
+		// 				oDiv[t].style.display="none";
+		// 			}
+		// 			this.className="activeBtn";
+		// 			oDiv[this.index].style.display="block";
+
+
+		// 		}
+		// 	}
+		// }
+		$(function(){
+			$("input").click(function(){
+				$("input").attr("class","");
+				$("div").fadeOut();
+
+				$(this).attr("class","activeBtn");
+				$("div").eq($(this).index()).fadeIn(2000);;
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<input type="button" class="activeBtn" value="1">
+	<input type="button" value="2">
+	<input type="button" value="3">
+	<div style="display: block">111111111</div>
+	<div>2222222222</div>
+	<div>3333333333</div>
+</body>
+</html>
