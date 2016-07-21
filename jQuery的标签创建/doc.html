@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("ul").append("<li>第一种</li>");
+			var oLi=$("<li>");
+			oLi.html("第二种");
+			$("ul").append(oLi);
+
+		});
+	</script>
+</head>
+<body>
+	<ul></ul>
+</body>
+</html>
