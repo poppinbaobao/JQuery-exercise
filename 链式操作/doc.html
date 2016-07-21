@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("div").find("p").eq(2).css("background","red").end().eq(5).css("background","blue").end().end().css({
+				border: "1px solid black",
+				
+			});;
+		})
+	</script>
+</head>
+<body>
+<div>
+	<p>11</p>
+	<p>22</p>
+	<p>33</p>
+	<p>44</p>
+	<p>55</p>
+	<p>66</p>
+</div>
+	
+</body>
+</html>
